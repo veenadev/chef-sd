@@ -1,6 +1,6 @@
 # cic-stackdriver-agent-cookbook
 
-TODO: Enter the cookbook description here.
+Cookbook for installing stackdriver agent on Linux platforms
 
 ## Supported Platforms
 
@@ -51,4 +51,4 @@ Include `cic-stackdriver-agent` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Tyler Barto (tyler.barto@reancloud.com)
