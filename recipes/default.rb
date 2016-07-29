@@ -2,23 +2,27 @@
 # Cookbook Name:: cic-stackdriver-agent
 # Recipe:: default
 #
-# Copyright (C) 2016 YOUR_NAME
+# Copyright (C) 2016 Tyler Barto
 #
 # All rights reserved - Do Not Redistribute
 #
 
-if node['platform_family'] == 'debian'
-  include_recipe 'cic-stackdriver-agent::debian'
+remote_file node['stackdriver_agent']['local_repo'] do
+  source node['stackdriver_agent']['repo_source']
 end
 
-if node['platform_family'] == 'rhel'
-  include_recipe 'cic-stackdriver-agent::rhel'
+if node['platform_family'] == 'debian'
+  include_recipe 'cic-stackdriver-agent::debian'
 end
 
 package 'stackdriver-agent'
 
 if node['platform_family'] == 'rhel'
   execute 'stackdriver_config' do
-    command "/opt/stackdriver/stack-config --api-key #{node['stackdriver_agent']['api_key']}"
+    if node['stackdriver_agent']['api_key']
+      command "/opt/stackdriver/stack-config --api-key #{node['stackdriver_agent']['api_key']}"
+    else
+      command "echo 'No Key Provided'"
+    end
   end
 end

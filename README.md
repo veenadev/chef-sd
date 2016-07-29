@@ -32,6 +32,24 @@ Cookbook for installing stackdriver agent on Linux platforms
     <td>API key for Stackdriver agent</td>
     <td><tt>nil</tt></td>
   </tr>
+  <tr>
+    <td><tt>['stackdriver_agent']['repo_list_jome']</tt></td>
+    <td>String</td>
+    <td>Remote source directory for stackdriver repo lists</td>
+    <td><tt>https://repo.stackdriver.com/</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['stackdriver_agent']['repo_list']</tt></td>
+    <td>String</td>
+    <td>Remote source filename for stackdriver repo lists</td>
+    <td><tt>based on platform and version</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['stackdriver_agent']['local_repo']</tt></td>
+    <td>String</td>
+    <td>path for copying remote repo list</td>
+    <td><tt>based on platform</tt></td>
+  </tr>
 </table>
 
 ## Usage
