@@ -1,4 +1,4 @@
-name             'cic-stackdriver-agent'
+name             'chef-stackdriver'
 maintainer       'YOUR_NAME'
 maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
