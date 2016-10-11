@@ -1,4 +1,4 @@
-# cic-stackdriver-agent-cookbook
+# chef-sd-cookbook
 
 Cookbook for installing stackdriver agent on Linux platforms
 
@@ -55,18 +55,15 @@ Cookbook for installing stackdriver agent on Linux platforms
 ## Usage
 
 
-### cic-stackdriver-agent::default
+### chef-sd::default
 
-Include `cic-stackdriver-agent` in your node's `run_list`:
+Include `chef-sd` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[cic-stackdriver-agent::default]"
+    "recipe[chef-sd::default]"
   ]
 }
 ```
 
-## License and Authors
-
-Author:: Tyler Barto (tyler.barto@reancloud.com)
