@@ -12,7 +12,7 @@ remote_file node['stackdriver_agent']['local_repo'] do
 end
 
 if node['platform_family'] == 'debian'
-  include_recipe 'cic-stackdriver-agent::debian'
+  include_recipe 'chef-sd::debian'
 end
 
 package 'stackdriver-agent'
